@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CV — Majd Nizar Youbiine</title>
+<link rel="icon" type="image/png" href="./assets/pic/hero_cutout.png">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./assets/css/portfolio.css">
+<style>
+  body {
+    background: #e8e6e1;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-body);
+    color: var(--black);
+    cursor: auto; /* override portfolio.css cursor:none */
+  }
+  body::before { display: none; }
+  /* Hide the custom cursor elements on the CV page */
+  #cursor, #cursor-follower { display: none !important; }
+  
+  /* Buttons */
+  .nav-area { position: absolute; top: 24px; left: 24px; right: 24px; display: flex; justify-content: space-between; }
+  .action-btn {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    color: var(--black);
+    background: transparent;
+    padding: 10px 20px;
+    border: 1.5px solid var(--black);
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .action-btn:hover { background: var(--black); color: var(--white); }
+  .back-btn { border-color: transparent; }
+  .back-btn:hover { background: transparent; color: var(--accent); }
+
+  /* CV Standard A4 Box */
+  .cv-document {
+    background: var(--white);
+    width: 210mm;
+    min-height: 297mm; 
+    box-sizing: border-box;
+    padding: 8mm 12mm;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.06);
+    margin: 40px auto 0;
+  }
+
+  /* Header Layout */
+  .cv-header-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .cv-photo-box {
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: transparent;
+    overflow: hidden;
+  }
+  .cv-photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .cv-title-info h1 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    line-height: 1;
+    margin-bottom: 2px;
+    color: var(--black);
+  }
+  .cv-title-info p.cv-subtitle {
+    font-family: var(--font-head);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 6px;
+    margin-top: 0;
+  }
+  .cv-contact-row {
+    font-size: 9.5px;
+    color: var(--gray-dark);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+  .cv-contact-row span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .cv-contact-row a {
+    color: var(--gray-dark);
+    text-decoration: none;
+  }
+
+  hr.cv-divider {
+    border: none;
+    height: 1.5px;
+    background: var(--gray-light);
+    margin: 8px 0;
+  }
+
+  /* Structural Sections */
+  .cv-section {
+    margin-bottom: 10px;
+  }
+  .cv-section-title {
+    font-family: var(--font-head);
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--black);
+    margin-bottom: 4px;
+    margin-top: 0;
+  }
+  
+  /* Tyopgraphy / Data mapping */
+  .cv-text {
+    font-size: 9.5px;
+    line-height: 1.4;
+    color: var(--black);
+    margin: 0;
+  }
+  
+  /* grids */
+  .cv-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  
+  .skill-block { margin-bottom: 4px; }
+  .skill-block strong { font-size: 9px; color: var(--accent); text-transform: uppercase; display: block; margin-bottom: 1px;}
+  .skill-block p { font-size: 9.5px; color: var(--black); margin: 0; line-height: 1.3;}
+
+  /* Entry Items */
+  .cv-entry { margin-bottom: 6px; }
+  .cv-entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1px;
+  }
+  .cv-entry-title {
+    font-family: var(--font-head);
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--black);
+    margin: 0;
+  }
+  .cv-entry-right {
+    font-size: 9px;
+    color: var(--gray-dark);
+    text-align: right;
+  }
+  .cv-entry-subtitle {
+    font-size: 9.5px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 1px;
+  }
+  .cv-entry-list {
+    margin: 1px 0 0;
+    padding-left: 12px;
+    font-size: 9.5px;
+    line-height: 1.35;
+  }
+  .cv-entry-list li { margin-bottom: 1px; }
+
+  /* ATS Strict Printing Fallback overrides */
+  @media print {
+    @page { margin: 0; size: A4; }
+    
+    /* Strict override to pure safe system fonts so Parsers can decode the PDF stream accurately */
+    * {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+      letter-spacing: normal !important; /* Huge letter-spacing confuses some bots */
+    }
+    
+    body { background: white; padding: 0; margin: 0; display: block; }
+    .nav-area { display: none !important; }
+    
+    /* Flatten the DOM visually so the print engine stacks elements predictably */
+    .cv-document { 
+        box-shadow: none; 
+        margin: 0; 
+        width: 100%; 
+        height: 100vh; /* Lock to exactly 1 page */
+        max-width: none;
+    }
+  }
+
+  @media (max-width: 900px) {
+    body { padding: 80px 10px 20px; }
+    .cv-document { width: 100%; min-height: auto; padding: 20px; }
+    .cv-grid-2 { grid-template-columns: 1fr; gap: 10px; }
+    .cv-header-block { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="nav-area">
+  <a href="index.html" class="action-btn back-btn">← Back to portfolio</a>
+  <button onclick="window.print()" class="action-btn">↓ Download / Print</button>
+</div>
+
+<div class="cv-document">
+  
+  <!-- HEADER -->
+  <div class="cv-header-block">
+    <div class="cv-photo-box">
+      <img src="./assets/pic/hero_headshot_cutout.png" alt="Majd Nizar Youbiine">
+    </div>
+    <div class="cv-title-info">
+       <h1>Majd Nizar Youbiine</h1>
+       <!-- Subtitle converted from H2 to P to protect hierarchy -->
+       <p class="cv-subtitle">IT Developer (Front-End Focus)</p>
+       <div class="cv-contact-row">
+           <!-- Emojis strictly removed to avoid bot extraction crashes -->
+           <span>Meknès, Morocco</span>
+           <span>|</span>
+           <span>majdnizary@gmail.com</span>
+           <span>|</span>
+           <span>+212 6 75 49 00 80</span>
+           <span>|</span>
+           <span><a href="https://www.linkedin.com/in/majd-nizar-youbine-5653b9337" target="_blank">linkedin.com/in/majd-nizar-youbine</a></span>
+       </div>
+    </div>
+  </div>
+  
+  <hr class="cv-divider">
+  
+  <!-- SUMMARY -->
+  <div class="cv-section">
+     <h2 class="cv-section-title">Professional Summary</h2>
+     <p class="cv-text">
+       Motivated IT student with practical experience in front-end web development, version control, and AI prompt engineering. Skilled in building responsive and interactive websites using HTML, CSS, Bootstrap, and JavaScript. Passionate about leveraging modern technologies and AI tools to develop efficient and user-friendly digital solutions.
+     </p>
+  </div>
+
+  <!-- TECHNICAL SKILLS -->
+  <div class="cv-section">
+     <h2 class="cv-section-title">Technical Skills & Profile</h2>
+     <div class="cv-grid-2">
+         <div>
+             <div class="skill-block">
+                 <strong>Web Development & Control</strong>
+                 <p>HTML5, CSS3, Bootstrap, JavaScript,PYTHON, GSAP, Git, GitHub,PHP</p>
+             </div>
+             <div class="skill-block">
+                 <strong>AI & Dev Tools</strong>
+                 <p>ChatGPT, GitHub Copilot, Prompt Engineering, Debugging, UI/UX</p>
+             </div>
+         </div>
+         <div>
+             <div class="skill-block">
+                 <strong>Soft Skills</strong>
+                 <p>Problem-solving, Fast learning, Teamwork</p>
+             </div>
+             <div class="skill-block">
+                 <strong>Languages</strong>
+                 <p>Arabic (Native), French (Int), English (Int)</p>
+             </div>
+             <div class="skill-block">
+                 <strong>Additional Interests</strong>
+                 <p>Football, Chess, Golf, Karting</p>
+             </div>
+         </div>
+     </div>
+  </div>
+
+  <hr class="cv-divider" style="opacity: 0.5;">
+
+  <!-- EXPERIENCE & PROJECTS -->
+  <div class="cv-section">
+     <h2 class="cv-section-title">Projects & Experience</h2>
+     
+     <div class="cv-entry">
+       <div class="cv-entry-head">
+         <h3 class="cv-entry-title">E-commerce Website — Crocs Store Clone (Team Project)</h3>
+         <div class="cv-entry-right">crocks.wuaze.com</div>
+       </div>
+       <ul class="cv-entry-list cv-text">
+           <li>Developed a responsive e-commerce website using HTML, CSS, Bootstrap, and JavaScript, ensuring 100% cross-device compatibility.</li>
+           <li>Designed the user interface independently across 5+ core web pages, accelerating the design phase by 40% using AI support tools.</li>
+           <li>Implemented dynamic interactive features and over 10 custom animations using the GSAP library.</li>
+           <li>Collaborated in a team environment, effectively contributing to project structure and version control via GitHub.</li>
+       </ul>
+     </div>
+     
+     <div class="cv-entry">
+       <div class="cv-entry-head">
+         <h3 class="cv-entry-title">Prompt Engineering Experiments</h3>
+         <div class="cv-entry-right">Independent</div>
+       </div>
+       <ul class="cv-entry-list cv-text">
+           <li>Designed and optimized over 50 complex prompts for AI-assisted frontend development iterations.</li>
+           <li>Improved code generation accuracy and output quality by 45% using advanced structured prompting techniques.</li>
+       </ul>
+     </div>
+     
+     <div class="cv-entry">
+       <div class="cv-entry-head">
+         <h3 class="cv-entry-title">Version Control Practice Project</h3>
+       </div>
+       <ul class="cv-entry-list cv-text">
+           <li>Managed scalable code environments using Git and GitHub, successfully executing 30+ version updates.</li>
+           <li>Maintained strict version control via branching and merging to achieve a near 0% code conflict rate during collaboration workflows.</li>
+       </ul>
+     </div>
+  </div>
+  
+  <hr class="cv-divider" style="opacity: 0.5;">
+
+  <!-- EDUCATION -->
+  <div class="cv-section">
+     <h2 class="cv-section-title">Education</h2>
+     
+     <div class="cv-entry">
+       <div class="cv-entry-head">
+         <h3 class="cv-entry-title">EPIM (École Privée d’Informatique et de Management)</h3>
+         <div class="cv-entry-right">Currently Studying</div>
+       </div>
+       <div class="cv-entry-subtitle">Specialized in Information Technology (IT)</div>
+       <div class="cv-text">Focus on web development, programming, and software fundamentals.</div>
+     </div>
+     
+     <div class="cv-entry" style="margin-top: 6px;">
+       <div class="cv-entry-head">
+         <h3 class="cv-entry-title">Baccalauréat (High School Diploma)</h3>
+         <div class="cv-entry-right">2022</div>
+       </div>
+     </div>
+  </div>
+
+  <hr class="cv-divider" style="opacity: 0.5;">
+
+  <!-- CERTIFICATIONS -->
+  <div class="cv-section">
+     <h2 class="cv-section-title">Certifications</h2>
+     
+     <div class="cv-grid-2">
+         <div class="cv-entry">
+           <div class="cv-entry-head">
+             <h3 class="cv-entry-title">Git & GitHub Basics</h3>
+             <div class="cv-entry-right">April 2026</div>
+           </div>
+           <div class="cv-entry-subtitle">Simplilearn SkillUp</div>
+         </div>
+         
+         <div class="cv-entry">
+           <div class="cv-entry-head">
+             <h3 class="cv-entry-title">Intro to Prompt Engineering (Copilot)</h3>
+             <div class="cv-entry-right">April 2026</div>
+           </div>
+           <div class="cv-entry-subtitle">Simplilearn (Microsoft-powered)</div>
+         </div>
+         
+         <div class="cv-entry">
+           <div class="cv-entry-head">
+             <h3 class="cv-entry-title">One Million Prompters Initiative</h3>
+             <div class="cv-entry-right">2026</div>
+           </div>
+           <div class="cv-text">Dubai Future Foundation & DCAI</div>
+         </div>
+         
+         <div class="cv-entry">
+           <div class="cv-entry-head">
+             <h3 class="cv-entry-title">Certificat Schobot Certifies</h3>
+             <div class="cv-entry-right">February 2024</div>
+           </div>
+           <div class="cv-entry-subtitle">Certification Technique Avancée</div>
+           <div class="cv-text">Validation des compétences académiques.</div>
+         </div>
+     </div>
+  </div>
+  
+</div>
+
+</body>
+</html>

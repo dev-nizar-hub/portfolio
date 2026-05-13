@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Majd Nizar Youbiine — Full-Stack Developer</title>
+<link rel="icon" type="image/png" href="./assets/pic/hero_cutout.png">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./assets/css/portfolio.css">
+<link rel="stylesheet" href="./assets/css/media.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-follower"></div>
+
+<!-- Premium Ambient Background -->
+<div class="ambient-bg">
+  <div class="ambient-orb orb-1" data-speed="0.2"></div>
+  <div class="ambient-orb orb-2" data-speed="-0.3"></div>
+  <div class="ambient-orb orb-3" data-speed="0.1"></div>
+</div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-text" id="loader-name">M.N.Y</div>
+  <div class="loader-bar-wrap"><div class="loader-bar" id="loader-bar"></div></div>
+  <div class="loader-percent" id="loader-percent">0%</div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">M<span>.</span>N<span>.</span>Y</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#timeline">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-action-group">
+    <a href="cv.html" class="nav-cv">My CV</a>
+    <a href="#contact" class="nav-cta">Hire me</a>
+  </div>
+  <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-line" data-speed="0.1"></div>
+  <div class="hero-bg-line" data-speed="0.2"></div>
+  <div class="hero-bg-line" data-speed="0.05"></div>
+
+  <div class="hero-tag" id="hero-tag">Developer Web and App</div>
+
+  <div class="hero-content-wrapper">
+    <div class="hero-text-side">
+      <h1 class="hero-title" id="hero-title">
+        Building<br>
+        digital<br>
+        <span class="italic">experiences.</span>
+      </h1>
+
+      <div class="hero-bottom">
+        <p class="hero-desc" id="hero-desc">
+          I'm <strong>Majd Nizar Youbiine</strong> — Developer of user-friendly interfaces and seamless user experiences globally.
+        </p>
+        <div class="hero-scroll" id="hero-scroll">
+          <div class="scroll-line"></div>
+          <span>Scroll</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-image-side tilt-wrapper" id="hero-image" data-speed="0.05">
+      <div class="tilt-inner">
+        <img src="./assets/pic/hero_cutout.png" alt="Majd Nizar Youbiine">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-item">HTML</div>
+    <div class="marquee-item">CSS</div>
+    <div class="marquee-item">Python</div>
+    <div class="marquee-item">JavaScript</div>
+    <div class="marquee-item">PHP</div>
+    <div class="marquee-item">MySQL</div>
+    <div class="marquee-item">HTML</div>
+    <div class="marquee-item">CSS</div>
+    <div class="marquee-item">Python</div>
+    <div class="marquee-item">JavaScript</div>
+    <div class="marquee-item">PHP</div>
+    <div class="marquee-item">MySQL</div>
+    <div class="marquee-item">HTML</div>
+    <div class="marquee-item">CSS</div>
+    <div class="marquee-item">Python</div>
+    <div class="marquee-item">JavaScript</div>
+    <div class="marquee-item">PHP</div>
+    <div class="marquee-item">MySQL</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">About me</div>
+  <h2 class="section-title">Who I <span class="italic">am.</span></h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm a full-stack developer with a passion for building <strong>modern, scalable web applications</strong>. I combine strong backend engineering skills with a sharp eye for clean, intuitive interfaces.</p>
+      <p>From designing database schemas and REST APIs to crafting animated, responsive frontends — I care about <strong>every layer of the stack</strong>. My goal is always to deliver software that is both technically sound and genuinely delightful to use.</p>
+      <p>Currently based in <strong>Morocco</strong>, working on diverse projects spanning SaaS products, e-commerce platforms, enterprise tools, and creative web experiences.</p>
+      <div class="about-links">
+        <a href="#work" class="btn-primary">View Work</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+    </div>
+    
+    <div class="skills-grid">
+      <div class="skill-item" data-skill="80">
+        <div class="skill-name">HTML</div>
+        <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+        <div class="skill-level">80%</div>
+      </div>
+      <div class="skill-item" data-skill="70">
+        <div class="skill-name">CSS</div>
+        <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+        <div class="skill-level">70%</div>
+      </div>
+      <div class="skill-item" data-skill="50">
+        <div class="skill-name">Python</div>
+        <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+        <div class="skill-level">50%</div>
+      </div>
+      <div class="skill-item" data-skill="20">
+        <div class="skill-name">JavaScript</div>
+        <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+        <div class="skill-level">20%</div>
+      </div>
+      <div class="skill-item" data-skill="30">
+        <div class="skill-name">PHP</div>
+        <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+        <div class="skill-level">30%</div>
+      </div>
+      <div class="skill-item" data-skill="40">
+        <div class="skill-name">MySQL</div>
+        <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+        <div class="skill-level">40%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-label">What I do</div>
+  <h2 class="section-title">My <span class="italic">services.</span></h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-num">01</span>
+      <h3 class="service-title">Full-Stack Web Development</h3>
+      <p class="service-desc">End-to-end web applications built with modern stacks. From database design and REST APIs to polished, responsive frontends.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">02</span>
+      <h3 class="service-title">UI / UX Engineering</h3>
+      <p class="service-desc">Pixel-perfect interfaces with smooth animations, accessible design, and outstanding user experience across all devices.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">03</span>
+      <h3 class="service-title">Backend & API Design</h3>
+      <p class="service-desc">Scalable REST and GraphQL APIs, microservices architecture, authentication systems, and robust server-side logic.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">04</span>
+      <h3 class="service-title">Database Architecture</h3>
+      <p class="service-desc">Relational and NoSQL database design, query optimization, migrations, and data modeling for complex domains.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">05</span>
+      <h3 class="service-title">Web Performance</h3>
+      <p class="service-desc">Auditing and optimizing load times, Core Web Vitals, caching strategies, and delivering fast, efficient applications.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">06</span>
+      <h3 class="service-title">Mobile-First PWAs</h3>
+      <p class="service-desc">Progressive Web Apps and responsive experiences designed to work flawlessly across all screen sizes and devices.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+  <div class="section-label">Portfolio</div>
+  <h2 class="section-title">Selected <span class="italic">work.</span></h2>
+  <div class="work-filter" id="work-filter">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+    <button class="filter-btn" data-filter="frontend">Frontend</button>
+    <button class="filter-btn" data-filter="api">API / Backend</button>
+  </div>
+  <div class="work-grid" id="work-grid">
+    <a href="https://noirorluxe.kesug.com/?i=1" target="_blank" class="work-card" data-category="frontend" style="text-decoration: none;">
+      <div class="work-card-placeholder" style="background: #1c160d;">
+        <span class="placeholder-icon" style="font-size: 72px;">🍽</span>
+      </div>
+      <div class="work-card-glass">
+        <div class="glass-top">
+          <div class="work-card-tag">Frontend · UI/UX</div>
+          <h3 class="work-card-title">The Golden Oak</h3>
+        </div>
+        <div class="glass-bottom">
+          <p class="work-card-desc">Dark-theme smart restaurant menu with animated 3D ingredient viewer, cart functionality, modal system, and toast notifications.</p>
+          <div class="work-arrow">View case study <span>→</span></div>
+        </div>
+      </div>
+    </a>
+    <a href="https://noirorluxe.kesug.com/?i=1" target="_blank" class="work-card" data-category="fullstack" style="text-decoration: none;">
+      <div class="work-card-placeholder" style="background: #0f1a0f;">
+        <span class="placeholder-icon" style="font-size: 72px;">🛒</span>
+      </div>
+      <div class="work-card-glass">
+        <div class="glass-top">
+          <div class="work-card-tag">Full-Stack · E-Commerce</div>
+          <h3 class="work-card-title">Product Platform</h3>
+        </div>
+        <div class="glass-bottom">
+          <p class="work-card-desc">Shopify-style product page with PHP/MySQL backend, InfinityFree hosting, cart system, and responsive product catalog frontend.</p>
+          <div class="work-arrow">View case study <span>→</span></div>
+        </div>
+      </div>
+    </a>
+    <a href="https://nizartaskflow.kesug.com" target="_blank" class="work-card" data-category="fullstack" style="text-decoration: none;">
+      <div class="work-card-placeholder" style="background: #0d1420;">
+        <span class="placeholder-icon" style="font-size: 72px;">✓</span>
+      </div>
+      <div class="work-card-glass">
+        <div class="glass-top">
+          <div class="work-card-tag">Full-Stack · App</div>
+          <h3 class="work-card-t itle">EPIM Todo List</h3>
+        </div>
+        <div class="glass-bottom">
+          <p class="work-card-desc">A highly responsive and secure task management platform featuring user authentication, deadline tracking, and an intuitive UI.</p>
+          <div class="work-arrow">View case study <span>→</span></div>
+        </div>
+      </div>
+    </a>
+    <a href="#work" class="work-card" data-category="api" style="text-decoration: none; cursor: default;">
+      <div class="work-card-placeholder" style="background: #1a1a1a;">
+        <span class="placeholder-icon" style="color: rgba(200,169,110,0.4); font-size: 80px;">⏳</span>
+      </div>
+      <div class="work-card-glass">
+        <div class="glass-top">
+          <div class="work-card-tag">Research · Concept</div>
+          <h3 class="work-card-title">Coming Soon</h3>
+        </div>
+        <div class="glass-bottom">
+          <p class="work-card-desc">Currently working on an advanced new project exploring modern microservices and advanced analytics data visualization.</p>
+          <div class="work-arrow">In progress... <span></span></div>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="section-label">Education</div>
+  <h2 class="section-title">My <span class="italic">journey.</span></h2>
+  <div class="timeline-list">
+    <div class="timeline-item">
+      <div class="timeline-year">2022 – Present</div>
+      <div class="timeline-degree">EPIM — École Professional d’Informatique et de Managements</div>
+      <div class="timeline-school">École Professional d’Informatique et de Management · Morocco</div>
+      <p class="timeline-text">Applied coursework in developement and financial accounting , management information systems, and business administration — complementing full-stack development practice.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2023 – 2025</div>
+      <div class="timeline-degree">Faculte des sciences Moulay Ismail</div>
+      <div class="timeline-school">2 years Studying Geologie for personal perpose</div>
+      <p class="timeline-text">Deep learning in geologie to find something new in life</p>
+    </div>
+    <div class="timeline-item"> 
+      <div class="timeline-year">2018</div>
+      <div class="timeline-degree">Programming Foundations</div>
+      <div class="timeline-school">First Steps in the Stack</div>
+      <p class="timeline-text">Started with HTML/CSS, JavaScript,. Built first web projects and developed a strong interest and clean software architecture.</p>
+    </div>
+    <div class="timeline-item" style="padding-bottom: 0;">
+      <div class="timeline-year">The beginning</div>
+      <div class="timeline-degree">A Passion for Building</div>
+      <div class="timeline-school">Where it all started</div>
+      <p class="timeline-text">Drawn to how software works, how interfaces feel, and what makes a product genuinely great — before writing a single line of code.</p>
+    </div>
+  </div>
+</section>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">Get in touch</div>
+  <h2 class="section-title">Let's <span class="italic">work together.</span></h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p>I'm always open to differents projects and collaborations. Whether it's a full product build, a tricky engineering challenge, or a fresh design direction — let's talk.</p>
+      <div class="contact-links">
+        <a href="mailto:majdnizary@gmail.com" class="contact-link">
+          <div>
+            <span class="contact-link-label">Email</span>
+            <span class="contact-link-value">majdnizary@gmail.com</span>
+          </div>
+          <span class="contact-arrow">↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/majd-nizar-youbine-5653b9337" target="_blank" class="contact-link">
+          <div>
+            <span class="contact-link-label">LinkedIn</span>
+            <span class="contact-link-value">linkedin.com/in/majd-nizar-youbine</span>
+          </div>
+          <span class="contact-arrow">↗</span>
+        </a>
+        <a href="https://github.com/dev-nizar-hub" target="_blank" class="contact-link">
+          <div>
+            <span class="contact-link-label">GitHub</span>
+            <span class="contact-link-value">github.com/dev-nizar-hub</span>
+          </div>
+          <span class="contact-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+    <form class="contact-form" id="contact-form">
+      <div class="form-group">
+        <label class="form-label">Your name</label>
+        <input type="text" class="form-input" placeholder="John Doe" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email address</label>
+        <input type="email" class="form-input" placeholder="john@company.com" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea class="form-textarea" placeholder="Tell me about your project..."></textarea>
+      </div>
+      <button type="submit" class="form-btn" id="form-btn">Send Message →</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-copy">© 2026 Majd Nizar Youbiine. All rights reserved.</span>
+  <a href="#hero" class="footer-logo">M<span>.</span>N<span>.</span>Y</a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="./assets/js/main.js"></script>
+</body>
+</html>

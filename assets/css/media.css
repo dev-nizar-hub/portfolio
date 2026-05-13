@@ -1,0 +1,42 @@
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  nav { padding: 24px 28px; }
+  .nav-links { display: none; }
+  .nav-action-group { display: none; }
+  .menu-toggle { display: flex; }
+  #hero { padding: 0 28px 64px; }
+  
+  .hero-content-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-image-side {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+  
+  /* Adjusted hero lines for mobile */
+  .hero-bg-line { display: none; }
+  
+  section { padding: 80px 28px; }
+  
+  .about-grid,
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card:nth-child(n) { grid-column: span 1; }
+
+  /* ── Work section ── */
+  .work-grid { grid-template-columns: 1fr; }
+  .work-card:nth-child(n) { grid-column: span 1; aspect-ratio: 1/1; }
+  .work-card-glass { padding: 24px; }
+  .work-card-title { font-size: clamp(20px, 6vw, 26px); }
+
+
+  footer { padding: 24px 28px; flex-direction: column; gap: 20px; align-items: flex-start; }
+  
+  .skills-grid { grid-template-columns: 1fr; }
+  .hero-bottom { flex-direction: column; align-items: flex-start; gap: 30px; }
+  .hero-stats { flex-wrap: wrap; }
+}
+
